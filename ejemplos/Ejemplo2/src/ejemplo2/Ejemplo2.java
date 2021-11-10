@@ -9,6 +9,9 @@
  * Estudiante reprobado con un promedio: 7.4 
  */
 package ejemplo2;
+//importar para poder realizar
+import java.util.Locale;
+import java.util.Scanner;
 
 /**
  *
@@ -21,7 +24,13 @@ public class Ejemplo2 {
      */
     public static void main(String[] args) {
         // Condicionale compuestos
-        double promedio = 7.4;
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+
+        double promedio;
+        
+        System.out.println("Ingrese el promedio del estudiante:");
+        promedio = entrada.nextDouble();
 
         if (promedio >= 7.5) {
             System.out.printf("Estudiante aprobado con un "
